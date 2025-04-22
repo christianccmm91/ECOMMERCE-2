@@ -356,7 +356,8 @@ h3 {
 .search-container {
     display: flex;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 20px;
+    
 }
 
 #search-form {
@@ -365,7 +366,7 @@ h3 {
 }
 
 #search-input {
-    padding: 10px 15px;
+    padding: 10px 8px;
     border: 2px solid #ddd;
     border-radius: 25px;
     outline: none;
@@ -381,7 +382,7 @@ h3 {
 .search-btn {
     background: none;
     border: none;
-    margin-left: -35px;
+    margin-left: -45px;/**/
     cursor: pointer;
     color: #555;
 }
@@ -567,7 +568,113 @@ label[for="menu"] img {
     transition: transform 0.3s ease;
 }
 
-/**/
+/*botones autrenticacion*/
+
+/* Estilos para los botones de autenticación */
+.auth-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: auto; /* Para alinear a la derecha */
+  }
+  
+  .auth-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  #login-btn {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+  }
+  
+  #register-btn {
+    background-color: #2196F3; /* Azul */
+    color: white;
+  }
+  
+  #logout-btn {
+    background-color: #f44336; /* Rojo */
+    color: white;
+  }
+  
+  #user-name {
+    color: #333;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* Efecto hover */
+  .auth-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  /* Estilos para la nueva estructura */
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+#search-form {
+    width: 100%;
+    max-width: 300px; /*tamano barra*/
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+}
+
+.search-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-container {
+    margin-left: auto;
+}
+
+/* Ajustes para responsive
+@media (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+    
+    .search-bar-container {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    } */
+
 
 
 

@@ -36,14 +36,11 @@
                 </ul>
             </nav>
 
-<!-- Barra busqueda -->
-            <div class="search-container">
-                <form id="search-form">
-                    <input type="text" id="search-input" placeholder="Buscar productos...">
-                    <button type="submit" class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
+            <div class="auth-buttons">
+              <button id="login-btn" class="auth-btn">Iniciar Sesión</button>
+              <button id="register-btn" class="auth-btn">Registrarse</button>
+              <button id="logout-btn" class="auth-btn" style="display: none;">Cerrar Sesión</button>
+              <span id="user-name" style="display: none;"></span>
             </div>
 
 
@@ -70,6 +67,14 @@
             </div>
         </div>
 
+        <div class="search-bar-container">
+          <form id="search-form">
+              <input type="text" id="search-input" placeholder="Buscar productos...">
+              <button type="submit" class="search-btn">
+                  <i class="fas fa-search"></i>
+              </button>
+          </form>
+      </div>
         
             <div class="header-banner container" id="ofertas">
         <div class="header-content">
@@ -549,5 +554,23 @@
     </Footer>
 
     <script src="script.js" defer></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+
+<!-- Configuración Firebase -->
+<script>
+  const firebaseConfig = {
+apiKey: "AIzaSyBsKimF-khuM0LvS4o4tEiwDDYZqAWwVd8",
+authDomain: "petshop-a37fd.firebaseapp.com",
+projectId: "petshop-a37fd",
+storageBucket: "petshop-a37fd.firebasestorage.app",
+messagingSenderId: "480910022554",
+appId: "1:480910022554:web:6d06f5027aafdb4698cc23",
+measurementId: "G-7B6T6EF643"
+}; 
+  // Inicializa Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
 </html>

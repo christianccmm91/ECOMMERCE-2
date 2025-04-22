@@ -219,3 +219,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cargarEventListeners();
 });
+
+// autenticacion 
+
+// Referencias a los botones
+const loginBtn = document.getElementById('login-btn');
+const registerBtn = document.getElementById('register-btn');
+const logoutBtn = document.getElementById('logout-btn');
+const userNameSpan = document.getElementById('user-name');
+
+// Configuración de proveedores (Google, Email, etc.)
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+// ===== REGISTRO CON GOOGLE =====
+registerBtn.addEventListener('click', () => {
+  firebase.auth().signInWithPopup(googleProvider)
+    .then((result) => {
+      console.log("Usuario registrado:", result.user);
+    })
+    .catch((error) => {
+      console.error("Error en registro:", error);
+      alert("Error al registrarse: " + error.message);
+    });
+});
+
+// ===== LOGIN CON GOOGLE =====
+loginBtn.addEventListener('click', () => {
+  firebase.auth().signInWithPopup(googleProvider)
+    .then((result) => {
+      console.log("Usuario logueado:", result.user);
+    })
+    .catch((error) => {
+      console.error("Error en login:", error);
+      alert("Error al iniciar sesión: " + error.message);
+    });
+});
+
+// ===== LOGOUT =====
+logoutBtn.addEventListener('click', () => {
+  firebase.auth().signOut()
+    .then(() => {
+      console.log("Sesión cerrada");
+    })
+    .catch((error) => {
+      console.error("Error al cerrar sesión:", error);
+    });
+});
+
+// ===== OBSERVADOR DE AUTENTICACIÓN =====
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // Usuario logueado: ocultar login/register, mostrar logout y nombre
+    loginBtn.style.display = 'none';
+    registerBtn.style.display = 'none';
+    logoutBtn.style.display = 'block';
+    userNameSpan.style.display = 'inline';
+    userNameSpan.textContent = user.displayName || user.email.split('@')[0];
+    
+    // Guardar usuario en localStorage (opcional)
+    localStorage.setItem('currentUser', JSON.stringify({
+      uid: user.uid,
+      name: user.displayName,
+      email: user.email
+    }));
+  } else {
+    // Usuario NO logueado: mostrar login/register, ocultar logout
+    loginBtn.style.display = 'block';
+    registerBtn.style.display = 'block';
+    logoutBtn.style.display = 'none';
+    userNameSpan.style.display = 'none';
+    localStorage.removeItem('currentUser');
+  }
+});
