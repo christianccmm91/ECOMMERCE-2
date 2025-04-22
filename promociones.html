@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones  Especiales - Dranna Pets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="Imagenes/fondo/logo.png" alt="Dranna Pets">
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="Imagenes/Icono/menu nuevo.png" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="promociones.html" class="active">Promociones</a></li>
+                    <li><a href="index.html#lista-1">Recomendados</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#lista-2">Productos ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#Perros">Perros</a></li>
+                            <li><a href="index.html#Gatos">Gatos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#Blog">Blog</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Carrito de compras -->
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="Imagenes/Icono/nuevo.png" id="img-carrito" alt="Carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-banner container" id="ofertas">
+            <div class="header-content">
+                <div class="header-txt">
+                    <h1>Las Mejores Promociones</h1>
+                    <p>Los Mejores Productos para tu Amigo Peludo</p>
+                    <div class="header-image">
+                        <img src="Imagenes/Promociones/fondo.jpg" alt="Ofertas para mascotas">
+                    </div>
+                    <p>Descubre nuestras promociones exclusivas para consentir a tu mascota. Productos seleccionados con descuentos especiales por tiempo limitado.</p>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de migas de pan -->
+    <div class="breadcrumb">
+        <a href="index.html">Inicio</a> > <span>promociones</span>
+    </div>
+
+    <!-- Sección Promotion con 3 productos -->
+    <section class="promotion" id="Promociones">
+        <div class="promotion-content container">
+            <div class="promocion-txt">
+                <h2>Promociones Especiales</h2>
+                
+            </div>
+
+            <div class="promotion content">
+                <!-- Producto 1 -->
+                <div class="ofert-1">
+                    <div class="etiqueta-oferta">-25%</div>
+                    <img src="Imagenes/promociones2/caja.webp" alt="">
+                    <div class="product-txt">
+                      <h3>Caja para Carro </h3>
+                      <p>Viajes</p>
+                      <p class="precio">$67000</p>
+                      <a href="#" class="agregar-carrito btn-3" data-id="35">Agregar</a>
+                    </div>
+                  </div>
+
+                  <div class="ofert-1">
+                    <div class="etiqueta-oferta">-25%</div>
+                    <img src="Imagenes/promociones2/chalwco.webp" alt="">
+                    <div class="product-txt">
+                      <h3>Chaleco Felino </h3>
+                      <p>Viajes</p>
+                      <p class="precio">$14000</p>
+                      <a href="#" class="agregar-carrito btn-3" data-id="36">Agregar</a>
+                    </div>
+                  </div>
+
+                  <div class="ofert-1">
+                    <div class="etiqueta-oferta">-25%</div>
+                    <img src="Imagenes/promociones2/impermeable.webp" alt="">
+                    <div class="product-txt">
+                      <h3>impermeable </h3>
+                      <p>Clima</p>
+                      <p class="precio">$34000</p>
+                      <a href="#" class="agregar-carrito btn-3" data-id="37">Agregar</a>
+                    </div>
+                  </div>
+
+                <div class="ofert-1">
+                    <div class="etiqueta-oferta">-25%</div>
+                    <img src="Imagenes/promociones2/malla.webp" alt="Arenero para gato">
+                    <div class="product-txt">
+                        <h3>Malla para Gato</h3>
+                        <p>Seguridad</p>
+                        <p class="precio">$12000</p>
+                        <a href="#" class="agregar-carrito btn-3" data-id="38">Agregar</a>
+                    </div>
+                </div>
+
+                <div class="ofert-1">
+                    <div class="etiqueta-oferta">-25%</div>
+                    <img src="Imagenes/promociones2/morral.webp" alt="Arenero para gato">
+                    <div class="product-txt">
+                        <h3>Morral Transportador</h3>
+                        <p>Viajes</p>
+                        <p class="precio">$48500</p>
+                        <a href="#" class="agregar-carrito btn-3" data-id="39">Agregar</a>
+                    </div>
+                </div>
+
+                <div class="ofert-1">
+                    <div class="etiqueta-oferta">-25%</div>
+                    <img src="Imagenes/promociones2/dientes.webp" alt="Arenero para gato">
+                    <div class="product-txt">
+                        <h3>Cepillo Dientes</h3>
+                        <p>Higiene</p>
+                        <p class="precio">$8000></p>
+                        <a href="#" class="agregar-carrito btn-3" data-id="40">Agregar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-columns container">
+        
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 80 # 102 - 64 Bogotá, Colombia</p>
+                <p><i class="fas fa-phone"></i> 320 427 2319 - 300 434 4256</p>
+            </div>
+    
+            
+            <div class="footer-col">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="index.html#lista-2">Productos</a></li>
+                    <li><a href="index.html#Blog">Blog</a></li>
+                </ul>
+            </div>
+    
+            
+            <div class="footer-col">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+                <p>Sábados: 10am - 2pm</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+    <header class="header">
+        <div class="menu container">
+
+            <a href="#" class="logo">
+                <img src="Imagenes/fondo/" alt="Dranna Pets">
+            </a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="Imagenes/Icono/menu nuevo.png" alt="menu">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#Promociones">Promociones</a></li>
+                    <li><a href="#lista-1">Recomendados</a></li>
+                    <li class="dropdown">
+                        <a href="#">Productos ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#Perros">Perros</a></li>
+                            <li><a href="#Gatos">Gatos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+<!-- Barra busqueda -->
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Buscar productos...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="Imagenes/Icono/nuevo.png" id="img-carrito" alt="">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+            <div class="header-banner container" id="ofertas">
+        <div class="header-content">
+            <div class="header-txt">
+                <h1>Ofertas Especiales</h1>
+                <p>Los Mejores Productos para tu Amigo Peludo</p>
+                <a href="#lista-2" class="btn-primary">Ver</a>
+            </div>
+            <div class="header-image">
+                <img src="Imagenes/Promociones/peluche perro.webp" alt="Ofertas para mascotas">
+            </div>
+        </div>
+    </div>
+</header>
+
+ <!-- Barra Navegacion -->
+ <div class="breadcrumb container" id="breadcrumb">
+  <a href="index.html">Inicio</a>
+</div>
+
+    <section class="oferts container" id="lista-1">
+        <h2>Recomendados para tu peludo</h2>
+        <p>
+            Descubre los mejores juguetes y accesorios para tu mascota en nuestra tienda online. Ofrecemos una amplia selección de productos para perros y gatos, desde juguetes interactivos hasta camisas cómodas y collares elegantes. Con envíos rápidos, precios competitivos y calidad garantizada, tenemos todo para consentir a tu compañero peludo.
+        </p>
+
+        <div class="oferts-content"> 
+            <div class="ofert-1">
+                <img src="Imagenes/Promociones/arenero.webp" alt="">
+                <div class="product-txt">
+                    <h3>Arenero con Tapa</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$75000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar</a>
+                </div>
+            </div>
+            <div class="ofert-1">
+                    <img src="Imagenes/Promociones/capa para gato.webp" alt="">
+                    <div class="product-txt">
+                        <h3>Capa para Lluvia</h3>
+                        <p>Calidad Premium</p>
+                        <p class="precio">$18000</p>
+                        <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar</a>
+                    </div>
+                </div>
+            <div class="logan-1">
+                <h3>Juguetes</h3>
+                <p>Accesorios</p>
+            </div>
+         </div>
+
+         <div class="oferts-content"> 
+            <div class="logan-1">
+                <h3>Juguetes</h3>
+                <p>Accesorios</p>
+            </div>
+            <div class="ofert-1">
+                <img src="Imagenes/Promociones/peluche perro.webp" alt="">
+                <div class="product-txt">
+                    <h3>Peluche Para perro</h3>
+                    <p>Calidad Premium</p>
+                    <p class="precio">$75000</p>
+                    <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar</a>
+                </div>
+            </div>
+            <div class="ofert-1">
+                    <img src="Imagenes/Promociones/traje abeja gato.webp" alt="">
+                    <div class="product-txt">
+                        <h3>Gato Abeja</h3>
+                        <p>Calidad Premium</p>
+                        <p class="precio">$18000</p>
+                        <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar</a>
+                    </div>
+                </div>   
+         </div>
+         
+    </section>
+
+    <section class="promotion">
+
+        <div class="promotion-content container" id="Promociones">
+
+            <div class="promocion-txt">
+                <h2>Los Mejores Promociones</h2>
+                <p>Dale a tu mascota lo mejor con nuestra exclusiva colección de accesorios y juguetes. Encuentra desde rascadores premium para gatos hasta juguetes resistentes para perros, todos diseñados para su seguridad y diversión. Con envíos express y atención personalizada, hacemos que cada compra sea una experiencia única para ti y tu compañero de cuatro patas.</p>
+                <a href="promociones.html" class="btn-1">Quiero ver </a>
+            </div>
+
+            <div class="promotion-img">
+                <img src="Imagenes/Recoemdados/juguete elastico.webp" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <main class="product container" id="lista-2">
+        <h2>Productos</h2>
+        <p>Encuentra productos diseñados pensando en el bienestar de tu mascota...</p>
+      
+        <!-- Productos para GATOS -->
+        <section class="productos-gatos" id="Gatos">
+          <h3>Productos para Gatos</h3>
+          <div class="product-content">
+            <div class="ofert-1">
+              <img src="Imagenes/Gatos/alfombra gato.webp" alt="">
+              <div class="product-txt">
+                <h3>Alfombra para Gato</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$32.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Gatos/arnes gato.webp" alt="">
+              <div class="product-txt">
+                <h3>Arnés para Gato</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$22.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Gatos/bustaca rascadora.webp" alt="">
+              <div class="product-txt">
+                <h3>Butaca Rascadora</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$48.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Gatos/fuente de agua para gatos.webp" alt="">
+              <div class="product-txt">
+                <h3>Fuente de Agua</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$48.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Gatos/juguete gato.webp" alt="">
+              <div class="product-txt">
+                <h3>Juguete</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$8.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar</a>
+              </div>
+            </div>
+
+            <div class="ofert-1">
+                <img src="Imagenes/Gatos/hamacagato.webp" alt="">
+                <div class="product-txt">
+                  <h3>Hamaca</h3>
+                  <p>Calidad Garantizada</p>
+                  <p class="precio">$42.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/cobija.webp" alt="">
+                <div class="product-txt">
+                  <h3>Cobija</h3>
+                  <p>Suave con tu peludo</p>
+                  <p class="precio">$22.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/banana.webp" alt="">
+                <div class="product-txt">
+                  <h3>Cama</h3>
+                  <p>banana</p>
+                  <p class="precio">$48.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/tunel.webp" alt="">
+                <div class="product-txt">
+                  <h3>Tunel</h3>
+                  <p>Diversion</p>
+                  <p class="precio">$48.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="13">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/canasto.webp" alt="">
+                <div class="product-txt">
+                  <h3>Canasto</h3>
+                  <p>Dulces suenos</p>
+                  <p class="precio">$58.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="14">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/mesedora.webp" alt="">
+                <div class="product-txt">
+                  <h3>Mesedora</h3>
+                  <p>Relajacion</p>
+                  <p class="precio">$63.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="15">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/sofa.webp" alt="">
+                <div class="product-txt">
+                  <h3>Sofa</h3>
+                  <p>Relajacion</p>
+                  <p class="precio">$94.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="16">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/alfombrajuego.webp" alt="">
+                <div class="product-txt">
+                  <h3>Alfombra de Juego </h3>
+                  <p>Diversion</p>
+                  <p class="precio">$67.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="17">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/rascadorpiso.webp" alt="">
+                <div class="product-txt">
+                  <h3>Rascador Piso</h3>
+                  <p>Diversion</p>
+                  <p class="precio">$47.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="18">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Gatos/arbol.webp" alt="">
+                <div class="product-txt">
+                  <h3>Palmera</h3>
+                  <p>Relajacion</p>
+                  <p class="precio">$127.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="19">Agregar</a>
+                </div>
+              </div>
+          </div>
+        </section>
+      
+        <!-- Productos para PERROS -->
+        <section class="productos-perros" id="Perros">
+          <h3>Productos para Perros</h3>
+          <div class="product-content">
+            <div class="ofert-1">
+              <img src="Imagenes/Perros/chaqueta.webp" alt="">
+              <div class="product-txt">
+                <h3>Chaqueta</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$32.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="20">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Perros/collar perro.webp" alt="">
+              <div class="product-txt">
+                <h3>Collar Iluminado</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$19.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="21">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Perros/mochila perro.webp" alt="">
+              <div class="product-txt">
+                <h3>Cargador</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$35.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="22">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Perros/palo para masticar.webp" alt="">
+              <div class="product-txt">
+                <h3>Mordedor</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$17.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="23">Agregar</a>
+              </div>
+            </div>
+      
+            <div class="ofert-1">
+              <img src="Imagenes/Perros/puerta perro.webp" alt="">
+              <div class="product-txt">
+                <h3>Puerta</h3>
+                <p>Calidad Garantizada</p>
+                <p class="precio">$38.000</p>
+                <a href="#" class="agregar-carrito btn-3" data-id="24">Agregar</a>
+              </div>
+            </div>
+
+            <div class="ofert-1">
+                <img src="Imagenes/Perros/cepillo.webp" alt="">
+                <div class="product-txt">
+                  <h3>Cepillo</h3>
+                  <p>Aseo</p>
+                  <p class="precio">$18.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="25">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/botella.webp" alt="">
+                <div class="product-txt">
+                  <h3>Botella</h3>
+                  <p>Portable</p>
+                  <p class="precio">$25.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="25">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/orina.webp" alt="">
+                <div class="product-txt">
+                  <h3>Alfombra de Orina</h3>
+                  <p>Absorvente</p>
+                  <p class="precio">$32.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="27">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/recortadora.webp" alt="">
+                <div class="product-txt">
+                  <h3>Recortadora</h3>
+                  <p>Higiene</p>
+                  <p class="precio">$32.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="28">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/gafas.webp" alt="">
+                <div class="product-txt">
+                  <h3>Gafas</h3>
+                  <p>Moda</p>
+                  <p class="precio">$12.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="29">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/mallacarro.webp" alt="">
+                <div class="product-txt">
+                  <h3>Malla</h3>
+                  <p>seguridad</p>
+                  <p class="precio">$62.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="30">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/ansiedad.webp" alt="">
+                <div class="product-txt">
+                  <h3>Control Ansiedad</h3>
+                  <p>Salud</p>
+                  <p class="precio">$22.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="31">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/asiento.webp" alt="">
+                <div class="product-txt">
+                  <h3>Asiento Carro</h3>
+                  <p>Comodidad</p>
+                  <p class="precio">$52.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="32">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/zapatos.webp" alt="">
+                <div class="product-txt">
+                  <h3>Zapatones</h3>
+                  <p>Higiene</p>
+                  <p class="precio">$14.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="33">Agregar</a>
+                </div>
+              </div>
+
+              <div class="ofert-1">
+                <img src="Imagenes/Perros/gorra.webp" alt="">
+                <div class="product-txt">
+                  <h3>Gorra</h3>
+                  <p>Moda</p>
+                  <p class="precio">$24.000</p>
+                  <a href="#" class="agregar-carrito btn-3" data-id="34">Agregar</a>
+                </div>
+              </div>
+          </div>
+        </section>
+      </main>
+      
+    <section class="blog container" id="Blog">
+        <h2>Nuevas Noticias Sobre tus Peluditos</h2>
+        <p>Descubre las noticias más relevantes, curiosidades y consejos expertos sobre perros y gatos en nuestro blog. Aquí compartimos las últimas tendencias en cuidado animal, novedades en productos, guías de entrenamiento y datos científicos que todo dueño responsable debería conocer.</p>   
+        
+        <div class="blog-content">
+
+            <div class="blog-1">
+                <img src="Imagenes/blog/noticigato.jpg" alt="">
+                <div class="blog-txt">
+                    <p>¿Por qué los gatos se sienten atraídos por ciertas plantas? Una experta le explica</p>
+                    <p>Si su gato suele morder o masticar las plantas de su casa, no se trata de un simple capricho: es un comportamiento natural en muchos felinos. Algunos lo hacen por curiosidad, otros por aburrimiento o incluso para aliviar molestias digestivas.</p>
+                    <a href="https://www.elespectador.com/la-huerta/por-que-los-gatos-se-sienten-atraidos-por-ciertas-plantas-una-experta-le-explica/" class="btn-4">Leer mas</a>
+                </div>
+            </div>
+
+            <div class="blog-1">
+                <img src="Imagenes/blog/perrojuego.jpg" alt="">
+                <div class="blog-txt">
+                    <p>¿Cuánto tiempo de juego al día necesita un cachorro? ¿Y un perro adulto?</p>
+                    <p>¡Jugar es esencial para nuestros amigos peludos! El juego no solo es una forma de que los perros se diviertan; también es clave para su bienestar físico, mental y emocional. A través del juego, liberan energía, desarrollan habilidades y fortalecen su vínculo con nosotros, sus humanos. Por eso, en Kiwoko, expertos en el cuidado de todas las especies animales, nos explican la importancia de dedicar tiempo de calidad al juego y elegir los juguetes adecuados según la edad, tamaño, raza y condición física de cada perro</p>
+                    <a href="https://www.lavanguardia.com/mascotas/perros/20241028/10057340/cuanto-tiempo-juego-dia-necesita-cachorro-perro-adulto.html" class="btn-4">Leer mas</a>
+                </div>
+            </div>
+
+            <div class="blog-1">
+                <img src="Imagenes/blog/perrobodega.png" alt="">
+                <div class="blog-txt">
+                    <p>“Perros y gatos no son equipaje”: la ley que evitaría llevar a animales en bodega</p>
+                    <p>Un proyecto de ley que busca regular el transporte público aéreo, terrestre, marítimo y fluvial de perros y gatos domésticos en Colombia fue radicado ayer, 23 de julio, ante la Cámara de Representantes. La iniciativa, que fue presentada por Carlos Ardila, representante de la circunscripción territorial del Putumayo, ya cuenta con el apoyo de 50 congresistas de diferentes bancadas.</p>
+                    <a href="https://www.elespectador.com/la-red-zoocial/perros-y-gatos-no-son-equipaje-la-ley-que-evitaria-llevar-a-animales-en-bodega-noticias-hoy/" class="btn-4">Leer mas</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <Footer class="footer" id="contacto">
+        <div class="footer-columns">
+            <!-- Columna 1: Contacto -->
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 80 # 102 - 64 Bogota - Colombia</p>
+                <p><i class="fas fa-phone"></i> 320 427 23 19 - 300 434 42 56</p>
+            </div>
+    
+            <!-- Columna 2: Enlaces rápidos (con Inicio) -->
+            <div class="footer-col">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li> <!-- Enlace añadido -->
+                    <li><a href="#lista-2">Productos</a></li>
+                    <li><a href="#lista-1">Recomendados</a></li>
+                    <li><a href="#Ofertas">Ofertas</a></li>
+                </ul>
+            </div>
+    
+            <!-- Columna 3: Horario -->
+            <div class="footer-col">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+                <p>Sábados: 10am - 2pm</p>
+            </div>
+        </div>
+    </Footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
