@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecommerce-web-service
+spec:
+  selector:
+    app: ecommerce-web
+  ports:
+    - protocol: TCP
+      port: 80         # Puerto del servicio dentro del clúster
+      targetPort: 80   # Puerto del contenedor (dentro del pod)
+  type: NodePort        # Permite acceso desde fuera del clúster (localhost:PORT)

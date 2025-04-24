@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-web
+  template:
+    metadata:
+      labels:
+        app: ecommerce-web
+    spec:
+      containers:
+        - name: ecommerce-web
+          image: ecommerce-web:local
+          imagePullPolicy: Never     # <-- Evita que Kubernetes intente descargarla
+          ports:
+            - containerPort: 80
