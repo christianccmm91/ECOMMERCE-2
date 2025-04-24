@@ -663,17 +663,19 @@ label[for="menu"] img {
     margin-left: auto;
 }
 
-/* Ajustes para responsive
-@media (max-width: 768px) {
-    .menu {
-        flex-wrap: wrap;
-    }
-    
-    .search-bar-container {
-        order: 3;
-        width: 100%;
-        margin-top: 10px;
-    } */
+.seccion-recomendaciones {
+    margin: 30px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .recomendacion {
+    margin: 10px 0;
+    padding: 8px;
+    background: white;
+    border-left: 3px solid #FF3C2A;
+  }
 
 
 

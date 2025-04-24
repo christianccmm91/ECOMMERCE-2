@@ -291,3 +291,24 @@ firebase.auth().onAuthStateChanged((user) => {
     localStorage.removeItem('currentUser');
   }
 });
+
+
+async function cargarRecomendaciones(tipoMascota) {
+    try {
+      const response = await fetch(`http://localhost:3002/api/recomendaciones/${tipoMascota}`);
+      const data = await response.json();
+      
+      const contenedor = document.getElementById('recomendaciones-container');
+      contenedor.innerHTML = data.map(item => `
+        <div class="recomendacion">
+          <p>⭐ ${item}</p>
+        </div>
+      `).join('');
+    } catch (error) {
+      console.error("Error cargando recomendaciones:", error);
+    }
+  }
+  
+  // Ejecutar al hacer clic en secciones
+  document.querySelector('#Perros').addEventListener('click', () => cargarRecomendaciones('perros'));
+  document.querySelector('#Gatos').addEventListener('click', () => cargarRecomendaciones('gatos'));
